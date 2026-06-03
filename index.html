@@ -447,6 +447,15 @@
         html.dark .theme-toggle-icon {
             transform: rotate(360deg);
         }
+
+        /* Interactive Border Animation for Footer Panel */
+        @keyframes spin-border {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-spin-border {
+            animation: spin-border 4s linear infinite;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-purple-500 selection:text-white relative transition-colors duration-500">
@@ -765,6 +774,30 @@
                     <span class="text-purple-500 drop-shadow-sm">Results-Driven.</span>
                 </div>
             </div>
+
+            <!-- NEW: Premium Interactive Credit Panel for ForgeSoftwares.in -->
+            <div class="mt-16 mb-4 flex justify-center relative z-20 reveal delay-200">
+                <a href="https://forgesoftwares.in" target="_blank" rel="noopener noreferrer" class="relative group overflow-hidden rounded-full p-[2px] block transform transition-transform hover:scale-[1.02] active:scale-95">
+                    <!-- Animated gradient border -->
+                    <span class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full animate-spin-border opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    
+                    <!-- Inner Glass/Clay Panel -->
+                    <div class="relative flex items-center gap-4 px-8 py-3.5 bg-[var(--clay-surface)] rounded-full transition-all duration-300 group-hover:bg-opacity-0">
+                        
+                        <!-- Floating Code Icon -->
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 to-blue-500 text-white shadow-[0_0_15px_rgba(139,92,246,0.5)] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        
+                        <!-- Text Content -->
+                        <div class="flex flex-col text-left pr-2">
+                            <span class="text-[10px] uppercase tracking-widest font-extrabold text-brandMuted group-hover:text-white transition-colors duration-300">Proudly Engineered By</span>
+                            <span class="text-lg font-extrabold text-brandText group-hover:text-white transition-colors duration-300 tracking-wide drop-shadow-md">ForgeSoftwares.in</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
         </div>
     </footer>
 
